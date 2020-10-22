@@ -14,6 +14,9 @@ if (file_exists(dirname(__FILE__) . '/leadrock-integration')) {
     require_once 'phar://' . dirname(__FILE__) . '/leadrock-integration.phar/vendor/autoload.php';
 }
 $integration = new \Leadrock\Layouts\Landing();
+$integration
+    ->addFacebookPixel((new \Leadrock\Items\FacebookPixel('2529920490596881'))->setEvent('Lead'))
+;
 include 'confirm.html';
 $integration->end();
 

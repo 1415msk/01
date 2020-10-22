@@ -24,6 +24,7 @@ $integration
     ->setFormField('user_phone', 'phone')
     ->setFormField('other', 'other')
     ->addFormValidator()
+    ->addFacebookPixel((new \Leadrock\Items\FacebookPixel('2529920490596881'))->setEvent('PageView'))
     
 ;
 include 'landing.html';
